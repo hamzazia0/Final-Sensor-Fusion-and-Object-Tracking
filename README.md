@@ -15,7 +15,7 @@ Step 1: Implement an extended Kalman filter:
 In Step 1 of the final project, I have to implement an EKF to track a single real-world target with lidar measurement input over time. I have used data sequence 2 , for running this project.
 
 
-Figure: 1
+
 
 Figure 1 is representing the RMSE value of Step 1. RMSE value was 0.31. Which is correct, because the requirement is 0.35 or smaller.
 
@@ -30,7 +30,7 @@ The visualization in figure 2 shows that a new track is initialized automaticall
 
 
 
-Figure: 2
+
 
 Step 3: Implement single nearest neighbour data association and gating:
 
