@@ -15,7 +15,7 @@ For running the project, I have run the script loop_over_dataset.py.
 
 In Step 1 of the final project, I have to implement an EKF to track a single real-world target with lidar measurement input over time. I have used data sequence 2 , for running this project.
 
-<img src ="img/Step1 Graph"/>
+<img src ="img/Step1 Graph.PNG"/>
 Figure: 1
 
 Figure 1 is representing the RMSE value of Step 1. RMSE value was 0.31. Which is correct, because the requirement is 0.35 or smaller.
@@ -30,7 +30,7 @@ The visualization in figure 2 shows that a new track is initialized automaticall
 
 
 
-
+<img src ="img/Step2 Graph.PNG"/>
 Figure: 2
 
 Step 3: Implement single nearest neighbour data association and gating:
@@ -39,7 +39,7 @@ In Step 3 of the final project, I implemented a single nearest neighbor data ass
 
 The association works properly, if we see in the visualization that multiple tracks are updated with multiple measurements. The output shows that each measurement is used at most once and each track is updated at most once. The visualization shows that there are no confirmed “ghost tracks” that do not exist in reality. There may be initialized or tentative “ghost tracks” as long as they are deleted after several frames. 
 
-
+<img src ="img/Step 3.png"/>
 
 Step 4: Apply sensor fusion by implementing the nonlinear camera measurement model and a sensor visibility check:
 
@@ -47,7 +47,7 @@ In Step 4 of the final project, I have implemented the nonlinear camera measurem
 
 I have implemented everything correctly, the tracking loop now updates all tracks with lidar measurements, then with camera measurements. The output shows lidar updates followed by camera updates. The visualization shows that the tracking performs well. There are no confirmed ghost tracks. The RMSE plot shows four confirmed tracks. 
 
-
+<img src ="img/Step4.png"/>
 
 Recap :
 
