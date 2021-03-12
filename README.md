@@ -15,7 +15,7 @@ For running the project, I have run the script loop_over_dataset.py.
 
 In Step 1 of the final project, I have to implement an EKF to track a single real-world target with lidar measurement input over time. I have used data sequence 2 , for running this project.
 
-<img src ="img/Step1 Graph"
+<img src ="img/Step1 Graph"/>
 Figure: 1
 
 Figure 1 is representing the RMSE value of Step 1. RMSE value was 0.31. Which is correct, because the requirement is 0.35 or smaller.
