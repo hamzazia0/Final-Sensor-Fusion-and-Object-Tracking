@@ -70,7 +70,7 @@ Yes there are some challenges in sensor fusion systems that will also occur in r
 I think there should be some different detection for human and living animals. Detecting hurdles is also a very important part. It is very important to insert in the system for vehicles when to stop. I think this will reduce the chances of avoiding any kind of accidents.
 
 
-## ays of improvement:
+## Ways of improvement:
 
 It should include the detection of living things separately.
 Detection of hurdles
