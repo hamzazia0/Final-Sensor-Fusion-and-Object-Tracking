@@ -1,5 +1,5 @@
 # Final-Sensor-Fusion-and-Object-Tracking
-##Final: Sensor Fusion and Object Tracking
+## Final: Sensor Fusion and Object Tracking
 
 The final project consists of four main steps:
 
@@ -11,7 +11,7 @@ Step 4: Apply sensor fusion by implementing the nonlinear camera measurement mod
 For running the project, I have run the script loop_over_dataset.py.
 
 
-##Step 1: Implement an extended Kalman filter:
+## Step 1: Implement an extended Kalman filter:
 
 In Step 1 of the final project, I have to implement an EKF to track a single real-world target with lidar measurement input over time. I have used data sequence 2 , for running this project.
 
@@ -22,7 +22,7 @@ Figure 1 is representing the RMSE value of Step 1. RMSE value was 0.31. Which is
 
 
 
-Step 2: Implement track management including track state and track score, track initialization and deletion:
+## Step 2: Implement track management including track state and track score, track initialization and deletion:
 
 In Step 2 of the final project, I have implemented the track management to initialize and delete tracks, set a track state and a track score. This task involves writing code within the file student/trackmanagement.py.
 
@@ -33,7 +33,7 @@ The visualization in figure 2 shows that a new track is initialized automaticall
 <img src ="img/Step2 Graph.PNG"/>
 Figure: 2
 
-Step 3: Implement single nearest neighbour data association and gating:
+## Step 3: Implement single nearest neighbour data association and gating:
 
 In Step 3 of the final project, I implemented a single nearest neighbor data association to associate measurements to tracks. 
 
@@ -41,22 +41,22 @@ The association works properly, if we see in the visualization that multiple tra
 
 <img src ="img/Step 3.png"/>
 
-Step 4: Apply sensor fusion by implementing the nonlinear camera measurement model and a sensor visibility check:
+## Step 4: Apply sensor fusion by implementing the nonlinear camera measurement model and a sensor visibility check:
 
 In Step 4 of the final project, I have implemented the nonlinear camera measurement model.
 
 I have implemented everything correctly, the tracking loop now updates all tracks with lidar measurements, then with camera measurements. The output shows lidar updates followed by camera updates. The visualization shows that the tracking performs well. There are no confirmed ghost tracks. The RMSE plot shows four confirmed tracks. 
 
-<img src ="img/Step4.png"/>
+<img src ="img/step4.png"/>
 
-Recap :
+## Recap :
 
 In Step 1 of the final project, I have implemented an EKF to track a single real-world target with lidar measurement input over time.
 In Step 2 of the final project, I have implemented the track management to initialize and delete tracks, set a track state and a track score.
 In Step 3 of the final project, I implemented a single nearest neighbor data association to associate measurements to tracks.
 In Step 4 of the final project, I have implemented the nonlinear camera measurement model.
 
-Most Difficult Part: 
+## Most Difficult Part: 
 
 Handling the track management system is the most difficult part for me. Because of its looping dimension and implementation, sometimes it was giving unexpected results and different results on the same code.
 
@@ -70,7 +70,7 @@ Yes there are some challenges in sensor fusion systems that will also occur in r
 I think there should be some different detection for human and living animals. Detecting hurdles is also a very important part. It is very important to insert in the system for vehicles when to stop. I think this will reduce the chances of avoiding any kind of accidents.
 
 
-Ways of improvement:
+## ays of improvement:
 
 It should include the detection of living things separately.
 Detection of hurdles
