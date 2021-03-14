@@ -27,6 +27,15 @@ class Track:
     def __init__(self, meas, id):
         print('creating track no.', id)
         M_rot = meas.sensor.sens_to_veh[0:3, 0:3] # rotation matrix from sensor to vehicle coordinates
+        pos_sens = np.ones((4, 1)) # homogeneous coordinates
+        pos_sens[0:3] = meas.z[0:3]
+        pos_veh = meas.sensor.sens_to_veh*pos_sens
+        P_pos = M_rot * meas.R * np.transpose(M_rot)
+        P_vel = np.matrix([[params.sigma_p44**2, 0, 0], [0, params.sigma_p55**2, 0], [0, 0, params.sigma_p66**2]])
+        # overall covariance initialization
+        self.P = np.zeros((6, 6))
+        self.P[0:3, 0:3] = P_pos
+        self.P[3:6, 3:6] = P_vel
         
         ############
         # TODO Step 2: initialization:
@@ -125,8 +134,7 @@ class Trackmanagement:
 
         # delete old tracks   
         for track in self.track_list:
-            if track.score <= params.delete_threshold:
-                if track.P[0, 0] >= params.max_P or track.P[1, 1] >= params.max_P:
+                if track.score <= params.delete_threshold or (track.P[0, 0] >= params.max_P or track.P[1, 1] >= params.max_P):
                     self.delete_track(track)
             
         ############
